@@ -1,0 +1,30 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Add language-specific setup here (e.g., setup-python, setup-node, etc.)
+
+      - name: Set up dependencies
+        run: echo "Install your dependencies here"
+
+      - name: Run tests
+        run: echo "Run your tests here"
+
+      - name: Build
+        run: echo "Build your application here"
+
+      # Add deployment steps below if needed
+      # - name: Deploy
+      #   run: echo "Deploy your application here"
